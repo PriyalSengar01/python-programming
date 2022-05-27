@@ -1,0 +1,89 @@
+Q1.Write a Python program to select a random element from a list, set, dictionary (value) and a file from a directory.
+
+  import random
+  import os
+  print("Select a random element from a list:")
+  elements = [1, 2, 3, 4, 5]
+  print(random.choice(elements))
+  print(random.choice(elements))
+  print(random.choice(elements))
+  print("\nSelect a random element from a set:")
+  elements = set([1, 2, 3, 4, 5])
+  print(random.choice(tuple(elements)))
+  print(random.choice(tuple(elements)))
+  print(random.choice(tuple(elements)))
+  print("\nSelect a random value from a dictionary:")
+  d = {"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}
+  key = random.choice(list(d))
+  print(d[key])
+  key = random.choice(list(d))
+  print(d[key])
+  key = random.choice(list(d))
+  print(d[key]) 
+  print("\nSelect a random file from a directory.:")
+  print(random.choice(os.listdir("/")))
+
+Q2. Write a Python program to generate a random alphabetical character, alphabetical string and alphabetical string of a fixed length.
+Use random.choice
+  import random
+  import string
+  print("Generate a random alphabetical character:")
+  print(random.choice(string.ascii_letters))
+  print("\nGenerate a random alphabetical string:")
+  max_length = 255
+     str1 = ""
+  for i in range(random.randint(1, max_length)):
+    str1 += random.choice(string.ascii_letters)
+  print(str1)
+  print("\nGenerate a random alphabetical string of a fixed length:")
+    str1 = ""
+  for i in range(10):
+    str1 += random.choice(string.ascii_letters)
+  print(str1)
+
+Q3.Write a Python program to select a random element from a list, set, dictionary (value) and a file from a directory.
+
+   import random
+   import os
+   print("Select a random element from a list:")
+   elements = [1, 2, 3, 4, 5]
+   print(random.choice(elements))
+   print(random.choice(elements))
+   print(random.choice(elements))
+   print("\nSelect a random element from a set:")
+   elements = set([1, 2, 3, 4, 5])
+   print(random.choice(tuple(elements)))
+   print(random.choice(tuple(elements)))
+   print(random.choice(tuple(elements)))
+   print("\nSelect a random value from a dictionary:")
+   d = {"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}
+      key = random.choice(list(d))
+   print(d[key])
+      key = random.choice(list(d))
+   print(d[key])
+      key = random.choice(list(d))
+
+Q4.Write a Python program to construct a seeded random number generator, also generate a float between 0 and 1, excluding 1.
+ 
+   import random
+   print("Construct a seeded random number generator:")
+   print(random.Random().random())
+   print(random.Random(0).random())
+   print("\nGenerate a float between 0 and 1, excluding 1:")
+   print(random.random
+
+Q5.Write a Python program to shuffle the elements of a given list.
+Use random.shuffle() 
+   import random 
+   nums = [1, 2, 3, 4, 5]
+   print("Original list:")
+   print(nums)
+   random.shuffle(nums)
+   print("Shuffle list:")
+   print(nums)
+   words = ['red', 'black', 'green', 'blue']
+   print("\nOriginal list:")
+   print(words)
+   random.shuffle(words)
+   print("Shuffle list:")
+   print(words)
