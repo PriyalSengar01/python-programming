@@ -1,0 +1,56 @@
+Q1.Write a program in python to manage exception that may occur while performing airthmetic operations on a user input.
+   try:
+   	a=eval(input("enter the no."))
+        b=eval(input("enter the no."))
+   	print(a+b)
+   	print(a-b)
+  	print(a*b)
+   	print(a/b)
+    	print(a%b)
+
+   except(Name Error, Zero Degree Error, Airthmetic Error, Type Error):
+   	print('Exception raised')
+Q2.Write a program to raise an exception during run time of a program.
+   try:
+   	u=eval(input("enter the no."))
+   	l=eval(input("enter the no."))
+   		for i in range (l,u+1):
+			a=i
+		    for j in (2,a/2):
+			if a%j!=0:
+			raise exception('prime exception')
+Q3.Program to handle multiple errors with oneexcept statement
+   def fun(a):
+   	if a < 4:
+ # throws ZeroDivisionError for a = 3
+   	   b = a/(a-3)
+   try:
+   	fun(3)
+   	fun(5)
+  except ZeroDivisionError:
+  	print("ZeroDivisionError Occurred and Handled")
+  except NameError:
+  	print("NameError Occurred and Handled")
+Q4. Write a program in python to manage exception that may occur while multiple except blocks.
+    try:
+    	a=5
+    	b=0
+    	print (a/b)
+    except TypeError:
+    	print('Unsupported operation')
+    except ZeroDivisionError:
+    	print ('Division by zero not allowed')
+    print ('Out of try except blocks')
+Q5. Write a python program to import module sys to get the type of exception.
+    import sys
+    randomList = ['a', 0, 2]
+    for entry in randomList:
+    	try:
+            print("The entry is", entry)
+            r = 1/int(entry)
+            break
+    	except:
+            print("Oops!", sys.exc_info()[0], "occurred.")
+            print("Next entry.")
+            print()
+       	print("The reciprocal of", entry, "is", r)
