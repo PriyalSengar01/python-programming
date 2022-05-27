@@ -1,0 +1,27 @@
+Q1.write a program in python to read an entrie text file.
+    f=open('sample.text','r')
+    print(f.read())
+    f.close()
+
+Q2.Write a program to python read first n lines of a file.
+    n=int(input)
+    f=open('sample.txt','r')
+    for i in range (n):
+    print(f.readline())
+    f.close()
+Q3.Write a program to append a text to a file and display the text.
+    f=open('sample.txt','a')
+    f.write("hi")
+    f.close()
+    f=open('sample.txt','r')
+    print(f.read())
+Q4.Write aprogram to read last n lines of a file.
+    n=int(input())
+    with open('file')as f:
+    print(list(f)[-n:])
+Q5.Write a program to read a file line by line and store it into a list.
+    ls=[]
+    with open('file')as f:
+    for line in f:
+        ls.append(line)
+    print(ls)
