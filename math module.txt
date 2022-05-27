@@ -1,0 +1,50 @@
+Q1.Write a Python program to read last n lines of a file.
+import sys
+import os
+def file_read_from_tail(fname,lines):
+        bufsize = 8192
+        fsize = os.stat(fname).st_size
+        iter = 0
+        with open(fname) as f:
+                if bufsize > fsize:
+                        bufsize = fsize-1
+                        data = []
+                        while True:
+                                iter +=1
+                                f.seek(fsize-bufsize*iter)
+                                data.extend(f.readlines())
+                                if len(data) >= lines or f.tell() == 0:
+                                        print(''.join(data[-lines:]))
+                                        break
+
+Q2.Write a Python program to convert radian to degree.
+
+pi=22/7
+radian = float(input("Input radians: "))
+degree = radian*(180/pi)
+print(degree)
+Q3. Write a Python program to calculate the area of a parallelogram.
+base = float(input('Length of base: '))
+height = float(input('Measurement of height: '))
+area = base * height
+print("Area is: ", area)
+Q4.Write a Python program to calculate surface volume and area of a cylinder.
+pi=22/7
+height = float(input('Height of cylinder: '))
+radian = float(input('Radius of cylinder: '))
+volume = pi * radian * radian * height
+sur_area = ((2*pi*radian) * height) + ((pi*radian**2)*2)
+print("Volume is: ", volume)
+print("Surface Area is: ", sur_area)
+Q5.Write a Python program to calculate the area of a sector.
+def sectorarea():
+    pi=22/7
+    radius = float(input('Radius of Circle: '))
+    angle = float(input('angle measure: '))
+    if angle >= 360:
+        print("Angle is not possible")
+        return
+    sur_area = (pi*radius**2) * (angle/360)
+    print("Sector Area: ", sur_area)
+
+sectorarea()
