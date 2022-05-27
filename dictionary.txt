@@ -1,0 +1,69 @@
+Q1.Write a program in python to merge two dict together and store it in the first dictionary without function.
+   a={1:2,2:3,3:4}
+   b={4:5}
+   for i in b:
+      a[i]=b[i]
+      print(a)
+Q2.Write a Python program to get the maximum and minimum value in a dictionary
+   dictionary = {"a": 5, "b": 2, "c": 8}
+   min_key = min(dictionary, key=dictionary.get)
+   print(min_key)
+   print(dictionary.get(min_key))
+Q3.Write a Python program to iterate over dictionaries using for loops. 
+   dt = {'a': 'juice', 'b': 'grill', 'c': 'corn'}
+
+   for key, value in dt.items():
+    print(key, value)
+Q4.Write a python programming to remove duplicate values in dictionary 
+   temp = [] 
+   res = dict() 
+   for key, val in test_dict.items(): 
+      if val not in temp: 
+          temp.append(val)
+          res[key] = val
+Q5.Write a Python program to map two lists into a dictionary.
+   keys = ['red', 'green', 'blue']
+   values = [' ']
+   color_dictionary = dict(zip(keys, values))
+   print(color_dictionary)
+Q6.Python3 Program to find sum of all items in a Dictionary.
+   def returnSum(myDict):
+     list = []
+     for i in myDict:
+         list.append(myDict[i])
+     final = sum(list)
+     return final
+   dict = {'a': 100, 'b': 200, 'c': 300}
+   print("Sum :", returnSum(dict))
+Q7.Write a Python program to remove duplicates from Dictionary.
+   temp = [] 
+   res = dict() 
+   for key, val in test_dict.items(): 
+      if val not in temp: 
+         temp.append(val) 
+         res[key] = val
+Q8.Write a Python program to get a dictionary from an object's field.
+   class dictObj(object):
+     def _init_(self):
+         self.x = 'red'
+         self.y = 'Yellow'
+         self.z = 'Green'
+     def do_nothing(self):
+         pass
+   test = dictObj()
+   print(test._dict_)
+Q9.Python Program to Add a Key-Value Pair to the Dictionary.
+   key=int(input("Enter the key (int) to be added:"))
+   value=int(input("Enter the value for the key to be added:"))
+   d={}
+   d.update({key:value})
+   print("Updated dictionary is:")
+   print(d)
+Q10.Write a Python program to check a dictionary is empty or not.    
+   myDict = {}
+   if not myDict:
+    print('The dictionary is empty.')
+   else:
+    print('The dictionary is not empty.
+
+
